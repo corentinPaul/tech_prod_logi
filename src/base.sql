@@ -5,7 +5,7 @@ nom_de_voie varchar (100), --addres de l Installation  col H 8
 code_postal varchar (6), -- code postal de la ville  col E 5
 commune varchar (50), -- commune qui hebere l installation C 3
 numero_voie int, -- numero de voie  G 7
-lieu-dit varchar(50), -- nom du lieu dit F 6
+lieu_dit varchar(50), -- nom du lieu dit F 6
 PRIMARY KEY (numero_inst)
 }
 
