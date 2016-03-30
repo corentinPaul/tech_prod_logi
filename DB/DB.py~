@@ -3,7 +3,7 @@
 
 import sqlite3
 
-conn = sqlite3.connect('DataBase.db')
+conn = sqlite3.connect('ma_base.db')
 
 cursor = conn.cursor()
 cursor.execute("""DROP TABLE IF EXISTS users""")
