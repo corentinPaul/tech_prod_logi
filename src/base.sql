@@ -2,7 +2,7 @@ CREATE TABLE Installation{
 numero_inst int, -- numéro d Installation col B 2
 nom_usuel_inst varchar(100),-- nom usuel  col A 1
 numero_voie int, -- numero de voie  G 7
-nom_de_voie varchar (100), --addres de l Installation  col H 8
+nom_voie varchar (100), --addres de l Installation  col H 8
 code_postal varchar (6), -- code postal de la ville  col E 5
 commune varchar (50), -- commune qui hebere l installation C 3
 lieu_dit varchar(50), -- nom du lieu dit F 6
