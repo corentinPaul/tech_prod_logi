@@ -8,7 +8,7 @@ conn = sqlite3.connect('sports_pdl.db')
 
 # INSTALLATION
 
-cr = csv.reader(open("./../src/Installation.csv","r"))
+cr = csv.reader(open("./csv/Installation.csv","r"))
 
 cursor = conn.cursor()
 cursor.execute("""DROP TABLE IF EXISTS installation""")
@@ -35,7 +35,7 @@ conn.commit()
 
 # EQUIPEMENT
 
-cr = csv.reader(open("./../src/Equipement.csv","r"))
+cr = csv.reader(open("./csv/Equipement.csv","r"))
 
 cursor = conn.cursor()
 cursor.execute("""DROP TABLE IF EXISTS equipement""")
@@ -62,7 +62,7 @@ conn.commit()
 
 # ACTIVITE
 
-cr = csv.reader(open("./../src/Activite.csv","r"))
+cr = csv.reader(open("./csv/Activite.csv","r"))
 
 cursor = conn.cursor()
 cursor.execute("""DROP TABLE IF EXISTS activite""")
