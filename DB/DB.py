@@ -71,14 +71,13 @@ CREATE TABLE IF NOT EXISTS activite(
    act_code INTEGER,
 	lib_act varchar(100),
 	equipement_id varchar(50),
-	PRIMARY KEY (equipement_id,act_code),
 	FOREIGN KEY (equipement_id) REFERENCES Installation(equipement_id)
 )
 """)
 
 activites = []
 for i,row in enumerate(cr):
-	if i > 0 and i<542:
+	if i > 0:
 		activites.append((row[4], row[5],row[2]))
 	
 cursor.executemany("""INSERT INTO activite(act_code,lib_act,equipement_id) VALUES(?, ?, ?)""", activites)
