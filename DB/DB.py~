@@ -68,10 +68,10 @@ cursor = conn.cursor()
 cursor.execute("""DROP TABLE IF EXISTS activite""")
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS activite(
+	id INTEGER PRIMARY KEY AUTO_INCREMENT,
    act_code INTEGER,
 	lib_act varchar(100),
 	equipement_id varchar(50),
-	PRIMARY KEY (equipement_id,act_code),
 	FOREIGN KEY (equipement_id) REFERENCES Installation(equipement_id)
 )
 """)
