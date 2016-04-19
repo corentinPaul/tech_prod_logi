@@ -6,7 +6,7 @@ from libs.bottle import route, template, run, static_file
 #	return template('template', name=name)
 @route('/')
 def index():
-	return template('template')
+	return template('index')
 	
 @route('/static/:path#.+#', name='static')
 def static(path):
