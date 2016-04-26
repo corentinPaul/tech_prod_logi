@@ -1,11 +1,16 @@
-from libs.bottle import route, template, run, static_file
+from libs.bottle import route, template, run, static_file, get
 import sqlite3
 import json
 
 
-#@route('/<name>')
-#def index(name):
-#	return template('template', name=name)
+@get('/info')
+def index():
+    return '<b>Hello </b>!'
+    
+@get('/info&<num>')
+def index(num):
+    return template('<b>Hello {{num}}</b>!',num=num)
+    
 @route('/')
 def index():
 	conn = sqlite3.connect('static/sports_pdl.db')

@@ -15,7 +15,7 @@
   </head>
   <body>
     <h1> Trouver une installation, un équipement ou une activité en pays de la loire </h1>
-    <form method="post" action="./../serveur/template.tpl">
+    <form method="get" action="/info">
     
     
       veuillez rentrer un code postal</br>
@@ -25,7 +25,7 @@
 		
       </select>
 		
-      </br>
+      <!--</br>
       veuillez selectionnner un équipement (exemple: terrain de basket) </br>
       
       <select id="select_equip">
@@ -36,9 +36,9 @@
       veuillez selectionner une installation <br>
       
       <select id="select_inst">
-      </select>
+      </select>-->
       
-      </br>
+      </br><br>
       <input type="submit" value="soumettre" id="sub"></input>
     </form>
     <h2>Résultats</h2>
