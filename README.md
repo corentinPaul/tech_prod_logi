@@ -1,9 +1,10 @@
 # tech_prod_logi
 this project is to create a web showing of "Pays de la Loire" sport installation with python script
 ____________________________________________________how to launch____________________________</br>
-1 create database by launching createdb.py </br>
-2 launch server using python3 server.py command</br>
-3 open a web browser and go to http://localhost:8080/ </br>
+1 place you in the tech_prod_logi folder </br>
+2 create database using python3  db/createdb.py </br>
+3 launch server using python3 server.py command</br>
+4 open a web browser and go to http://localhost:8080/ </br>
 ____________________________________________________contents_________________________________</br>
 
 in main folder: </br>
