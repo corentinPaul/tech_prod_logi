@@ -65,7 +65,7 @@ conn.commit()
 cr = csv.reader(open("./csv/Activite.csv","r"))
 
 cursor = conn.cursor()
-cursor.execute("""DROP TABLE IF EXISTS activite""") #creation of table activities
+cursor.execute("""DROP TABLE IF EXISTS activite""") #creation of table  for activities
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS activite(
 	id INTEGER AUTO_INCREMENT PRIMARY KEY,
