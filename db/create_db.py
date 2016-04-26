@@ -30,7 +30,7 @@ for i,row in enumerate(cr):
 		installations.append((row[1], row[0],row[6],row[7],row[4],row[2],row[5]))
 
 cursor.executemany("""INSERT INTO installation(numero_inst, nom_usuel_inst,numero_voie,nom_voie,code_postal,commune,lieu_dit) VALUES(?, ?, ?, ?, ?, ?, ?)""", installations)
-
+#insertion of datas
 conn.commit()
 
 # EQUIPEMENT
@@ -56,7 +56,7 @@ for i,row in enumerate(cr):
 	if i > 0:
 		equipements.append((row[4], row[3],row[2],row[180],row[181]))
 
-cursor.executemany("""INSERT INTO equipement(equipement_id,nom_equip,numero_inst,longitude,latitude) VALUES(?, ?, ?, ?, ?)""", equipements)
+cursor.executemany("""INSERT INTO equipement(equipement_id,nom_equip,numero_inst,longitude,latitude) VALUES(?, ?, ?, ?, ?)""", equipements)#insertion of datas
 
 conn.commit()
 
@@ -81,11 +81,6 @@ for i,row in enumerate(cr):
 	if i > 0:
 		activites.append((row[4], row[5],row[2]))
 
-cursor.executemany("""INSERT INTO activite(act_code,lib_act,equipement_id) VALUES(?, ?, ?)""", activites)
+cursor.executemany("""INSERT INTO activite(act_code,lib_act,equipement_id) VALUES(?, ?, ?)""", activites) #insertion of datas
 
 conn.commit()
-
-#cursor.execute("""SELECT nom_usuel_instal FROM installations""")
-#rows = cursor.fetchall()
-#for row in rows:
-#    print('{0}'.format(row[0]))
