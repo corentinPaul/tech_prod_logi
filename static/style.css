@@ -24,6 +24,7 @@ h2{
 
 .ui-autocomplete
 {
-	height: 130px;
-	overflow: scroll;
+	 max-height: 130px;
+    overflow-y: auto;
+    overflow-x: visible;
 }

@@ -10,22 +10,22 @@
       <script src="static/script.js"></script>
       
       <script>
-			tab = {{!tab}}
+			tab = {{!tab}};
 		</script>
   </head>
   <body>
     <h1> Trouver une installation, un équipement ou une activité en pays de la loire </h1>
-    <form method="get" action="/info">
+    <form method="get" action="/select">
     
     
       veuillez rentrer un code postal</br>
-      <input type="text" id="autocomplete_postal"></input> </br>
+      <input type="text" id="autocomplete_postal" name="postal"></input> </br>
       veuillez selectionner une activité </br>
-      <select id="select_act">
+     	<!--<select id="select_act">
 		
       </select>
 		
-      <!--</br>
+      </br>
       veuillez selectionnner un équipement (exemple: terrain de basket) </br>
       
       <select id="select_equip">

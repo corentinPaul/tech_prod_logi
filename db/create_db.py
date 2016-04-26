@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS activite(
    act_code INTEGER,
 	lib_act varchar(100),
 	equipement_id varchar(50),
-	FOREIGN KEY (equipement_id) REFERENCES Installation(equipement_id)
+	FOREIGN KEY (equipement_id) REFERENCES equipement(equipement_id)
 )
 """)
 
