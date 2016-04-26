@@ -6,11 +6,11 @@ import json
 @get('/info')
 def index():
     return '<b>Hello </b>!'
-    
+
 @get('/info&<num>')
 def index(num):
     return template('<b>Hello {{num}}</b>!',num=num)
-    
+
 @route('/')
 def index():
 	conn = sqlite3.connect('static/sports_pdl.db')# in order to have access to the database you must connect
