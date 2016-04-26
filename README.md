@@ -10,7 +10,7 @@ ____________________________________________________contents____________________
 in main folder: </br>
 db folder: contains the database and the script to create it </br>
 index.tpl : the html web page </br>
-libs folder: libs for the python server /!\ we don't garanty the good working of this project if you modified it </br>
+libs folder: libs for the python server /!\ we don't garanty the good working of this project if you modified it /!\ </br>
 README.md : a texte file with description of project how to launch it and other important information </br>
 server.py: a python server who runs the App </br>
 sports_pdl.db: a copy of the database but we advises you to download the 3 csv file to create the database and run createdb.py </br>
