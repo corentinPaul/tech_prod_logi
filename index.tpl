@@ -8,36 +8,36 @@
   		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
       <script src="static/script.js"></script>
-      
+
       <script>
-			tab = {{!tab}}
+			tab = {{!tab}} //connect the js variable to py variable
 		</script>
   </head>
   <body>
     <h1> Trouver une installation, un équipement ou une activité en pays de la loire </h1>
     <form method="get" action="/info">
-    
-    
+
+
       veuillez rentrer un code postal</br>
       <input type="text" id="autocomplete_postal"></input> </br>
       veuillez selectionner une activité </br>
       <select id="select_act">
-		
+
       </select>
-		
+
       <!--</br>
       veuillez selectionnner un équipement (exemple: terrain de basket) </br>
-      
+
       <select id="select_equip">
       </select>
-      
-      
+
+
       </br>
       veuillez selectionner une installation <br>
-      
+
       <select id="select_inst">
       </select>-->
-      
+
       </br><br>
       <input type="submit" value="soumettre" id="sub"></input>
     </form>
