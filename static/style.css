@@ -21,3 +21,9 @@ h2{
 #sub{
   margin-top: 10px;
 }
+
+.ui-autocomplete
+{
+	height: 130px;
+	overflow: scroll;
+}

@@ -4,8 +4,14 @@
     <meta charset="utf-8"/>
       <title>sport en pays de la loire</title>
       <link rel="stylesheet" type="text/css" href="static/style.css" media="screen" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
       <script src="static/script.js"></script>
+      
+      <script>
+			tab = {{!tab}}
+		</script>
   </head>
   <body>
     <h1> Trouver une installation, un équipement ou une activité en pays de la loire </h1>
@@ -13,26 +19,11 @@
     
     
       veuillez rentrer un code postal</br>
-      <input type="text"></input> </br>
+      <input type="text" id="autocomplete_postal"></input> </br>
       veuillez selectionner une activité </br>
       <select id="select_act">
 		
       </select>
-
-		<script>
-		tab = [];
-		var i = 0;
-		<%import sqlite3
-
-			conn = sqlite3.connect('static/sports_pdl.db')
-			cursor = conn.cursor()
-			cursor.execute("""SELECT DISTINCT code_postal FROM installation""")
-			for x in cursor.fetchall():%>
-				var val = {{x[0]}}
-				tab[i] = val;
-				i++;
-			%end
-		</script>
 		
       </br>
       veuillez selectionnner un équipement (exemple: terrain de basket) </br>

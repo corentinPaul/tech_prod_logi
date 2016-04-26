@@ -1,6 +1,3 @@
 $( document ).ready(function() {
-    setTimeout(function()
-    {
-    	alert(tab)
-    },1000)
+	$("#autocomplete_postal").autocomplete({source: tab});
 })
