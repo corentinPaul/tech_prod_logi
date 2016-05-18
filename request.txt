@@ -1,7 +1,0 @@
-pour ville
-
-select lib_act, numero_voie, nom_voie, lieu_dit, nom usuel from installation i, equipement e, activite a where i.numero_inst=e.numero_inst and e.equipement_id=a.equipement_id and  code_postal= valeur codepostal ;
-
-pour activité
-
-select  numero_voie, nom_voie, lieu_dit,code_postal, commune, nom usuel from installation i, equipement e, activite a where i.numero_inst=e.numero_inst and e.equipement_id=a.equipement_id and  act_code=valeur code activité ;
