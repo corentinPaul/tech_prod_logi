@@ -1,11 +1,23 @@
 $( document ).ready(function() {
   $(function() {
+
     $( "#radio" ).buttonset();
   });
   $("#choix_code").click();
   $("#sub").button();
 	$("#autocomplete_postal").autocomplete({source: tab}); //that make an autocomplete for city and postal code
 	$("#autocomplete_activite").autocomplete({source: act}); //that make an autocomplete for city and postal code
+
+
+//CORENTIN
+    $("#onglets").tabs();
+     $('#test').DataTable();
+     maps = new GMaps({
+  div: '#onglet-1',
+  lat: -12.043333,
+  lng: -77.028333
+})
+    //fin CORENTIN
 })
 
 function code_choisie()
@@ -39,6 +51,7 @@ function act_choisie()
 }
 
 // CORENTIN
+
 
 
 //FIN CORENTIN
