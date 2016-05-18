@@ -7,19 +7,28 @@
       <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  		
+  		<link rel="stylesheet" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+		<script src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+ 		<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+		<script src="http://raw.githubusercontent.com/HPNeo/gmaps/master/gmaps.js"></script>
+    
       <script src="static/script.js"></script>
-
+		
       <script>
 			tab = {{!tab}} //connect the js variable to py variable
 			act = {{!act}} //connect the js variable to py variable
 			
-			code_postal = {{!code_postal}}//
-			num_act = {{!num_act}}//
+			code_postal = {{!code_postal}}
+			num_acti = {{!num_act}}
+			
+			maps = {{!maps}}
+			table = {{!table}}
 		</script>
   </head>
   <body>
     <h1> Trouver une installation, un équipement ou une activité en pays de la loire </h1>
-    <form method="get" action="/info">
+    <form id="form">
 		  <div id="radio">
 			 <input type="radio" id="radio1" name="radio"><label onclick="code_choisie()" for="radio1">Ville/Code postal</label>
 			 <input type="radio" id="radio2" name="radio"><label for="radio2" onclick="act_choisie()">Activité</label>
@@ -49,12 +58,47 @@
       <input type="submit" value="soumettre" id="sub"></input>
     </form>
     
-    
-    
-    <!-- CORENTIN  -->
-    <h2>Résultats</h2>
-    
-    
-    <!-- FIN CORENTIN  -->
+    <div id="resultats">
+			<div id="onglets">
+				<ul>
+				  <li><a href="#onglet-1" id="li_1">MAPS</a></li>
+				  <li><a href="#onglet-2" id="li_2">TABLEAU</a></li>
+				</ul>
+				<div id="onglet-1">
+					<div id="maps"></div>
+				</div>
+				<div id="onglet-2">
+				  <table id="table_resultats">
+				   <thead>
+				     <tr>
+				       <th>activité</th>
+				       <th>adresse</th>
+				       <th>nom d'installation</th>
+				     </tr>
+				   </thead>
+				   <tfoot>
+				     <tr>
+				       <th>activité</th>
+				       <th>adresse</th>
+				       <th>nom d'installation</th>
+				     </tr>
+				   </tfoot>
+				   <tbody>
+				   <tr>
+				     <td>abwar</td>
+				     <td>balbla</td>
+				     <td>blalbal</td>
+				   </tr>
+				   <tr>
+				     <td>abwar2</td>
+				     <td>balbla</td>
+				     <td>blalbal</td>
+				   </tr>
+				   </tbody>
+				   
+				  <table>
+				</div>
+			 </div>
+		</div>
   </body>
 </html>
