@@ -25,7 +25,9 @@
 			
 			maps = {{!maps}}//les coordonnées des installations pour maps
 			table = {{!table}}//les infos sur les installations pour la table
-
+			
+			nom_ville = {{!ville}}
+			nom_act = {{!activite}}
 
 			//code_postal = {{!code_postal}}//
 			//num_act = {{!num_act}}//
