@@ -1,17 +1,16 @@
 $( document ).ready(function() {
-<<<<<<< HEAD
+
  	$( "#radio" ).buttonset();
-=======
+
   $(function() {
 
     $( "#radio" ).buttonset();
   });
->>>>>>> ea97de9ab8022133badfc71b2c096761e6d5d6d0
   $("#choix_code").click();
   $("#sub").button();
 	$("#autocomplete_postal").autocomplete({source: tab}); //that make an autocomplete for city and postal code
 	$("#autocomplete_activite").autocomplete({source: act}); //that make an autocomplete for city and postal code
-<<<<<<< HEAD
+
 	check = false;
 	$("#form").submit(function(event){
 		var code_post = 0;
@@ -58,7 +57,7 @@ $( document ).ready(function() {
 	{
 		$("#resultats").remove();
 	}
-=======
+
 
 
 //CORENTIN
@@ -70,7 +69,6 @@ $( document ).ready(function() {
   lng: -77.028333
 })
     //fin CORENTIN
->>>>>>> ea97de9ab8022133badfc71b2c096761e6d5d6d0
 })
 
 function code_choisie()

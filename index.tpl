@@ -18,18 +18,18 @@
       <script>
 			tab = {{!tab}} //connect the js variable to py variable
 			act = {{!act}} //connect the js variable to py variable
-<<<<<<< HEAD
+//<<<<<<< HEAD
 			
 			code_postal = {{!code_postal}}
 			num_acti = {{!num_act}}
 			
 			maps = {{!maps}}
 			table = {{!table}}
-=======
+//=======
 
 			code_postal = {{!code_postal}}//
 			num_act = {{!num_act}}//
->>>>>>> ea97de9ab8022133badfc71b2c096761e6d5d6d0
+/*>>>>>>> ea97de9ab8022133badfc71b2c096761e6d5d6d0*/
 		</script>
   </head>
   <body>
@@ -63,7 +63,6 @@
       </select>-->
       <input type="submit" value="soumettre" id="sub"></input>
     </form>
-<<<<<<< HEAD
     
     <div id="resultats">
 			<div id="onglets">
@@ -107,7 +106,6 @@
 				</div>
 			 </div>
 		</div>
-=======
 
 
 
@@ -156,6 +154,5 @@
       </div>
     </div>
     <!-- FIN CORENTIN  -->
->>>>>>> ea97de9ab8022133badfc71b2c096761e6d5d6d0
   </body>
 </html>
