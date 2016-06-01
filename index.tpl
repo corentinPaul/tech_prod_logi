@@ -7,27 +7,35 @@
       <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  		
+
   		<link rel="stylesheet" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
 		<script src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
  		<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
 		<script src="http://raw.githubusercontent.com/HPNeo/gmaps/master/gmaps.js"></script>
-    
+
       <script src="static/script.js"></script>
-		
+
       <script>
 			tab = {{!tab}} //connect the js variable to py variable
 			act = {{!act}} //connect the js variable to py variable
 
-			
+
 			code_postal = {{!code_postal}}//code_postal choisi si choisi
 			num_acti = {{!num_act}}//numéro activité choisi si choisi
-			
+
 			maps = {{!maps}}//les coordonnées des installations pour maps
 			table = {{!table}}//les infos sur les installations pour la table
+<<<<<<< HEAD
 			
 			nom_ville = {{!ville}}
 			nom_act = {{!activite}}
+=======
+
+
+
+			//code_postal = {{!code_postal}}//
+			//num_act = {{!num_act}}//
+>>>>>>> 2d1511882055c2adb7740a2b8b9cfd29b6c75a27
 		</script>
   </head>
   <body>
