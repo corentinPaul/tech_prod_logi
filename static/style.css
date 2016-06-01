@@ -46,8 +46,8 @@ h2{
 
 #maps
 {
-	width:100%;
-	height:500px
+	width: !important;
+	height:500px;
 }
 
 table tr td
