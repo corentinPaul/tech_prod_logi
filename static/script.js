@@ -43,14 +43,54 @@ $( document ).ready(function() {
 		}
 		else
 		{
+			if (nom_ville !="")
+			{
+				var tFootHead = "<tr><td>Activité</td><td>Installation</td><td>Adresse</td></tr>";
+				var tBody = "";
+				for (i = 0;i<table.length;i++)
+				{
+					tBody += "<tr>";
+					tBody += "<td>"+table[i][1]+"</td>";
+					tBody += "<td>"+table[i][2]+"</td>";
+					tBody += "<td>"+table[i][3]+"</td>";
+					tBody += "</tr>";
+				}
+				$("#tbody_info").html(tBody);
+				$("#tfoot_info").html(tFootHead);
+				$("#thead_info").html(tFootHead);
+			}
+			else
+			{
+				var tFootHead = "<tr><td>Installation</td><td>Adresse</td><td>Commune</td></tr>";
+				var tBody = "";
+				for (i = 0;i<table.length;i++)
+				{
+					tBody += "<tr>";
+					tBody += "<td>"+table[i][1]+"</td>";
+					tBody += "<td>"+table[i][2]+"</td>";
+					tBody += "<td>"+table[i][3]+"</td>";
+					tBody += "</tr>";
+				}
+				$("#tbody_info").html(tBody);
+				$("#tfoot_info").html(tFootHead);
+				$("#thead_info").html(tFootHead);
+			}
+			
+			$("#resultats").animate({'opacity':'0'},0);
 			$("#onglets").tabs();
 			maps = new GMaps({
 			  div: '#maps',
 			  lat: -12.043333,
 			  lng: -77.028333
 			})
-			$("#li_2").click();
-			$('#table_resultats').DataTable();
+			
+			setTimeout(function()
+			{
+				$("#onglet-1").css('width','');
+				$("#li_2").click();
+				$("#resultats").animate({'opacity':'1'},500);
+				$('#table_resultats').DataTable();
+			},1000);
 		}
 	}
 	else

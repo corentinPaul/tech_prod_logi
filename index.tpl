@@ -28,12 +28,15 @@
 			
 			nom_ville = {{!ville}}
 			nom_act = {{!activite}}
-
-			//code_postal = {{!code_postal}}//
-			//num_act = {{!num_act}}//
 		</script>
   </head>
   <body>
+    <div id="premier_plan">
+    
+    <p id="titre_main"> Bienvenue sur le site des activitées sportives en Pays de Loire
+    </p>
+    <input id="submit_main" type="submit" value="effectuer une recherche">
+    </div>
     <h1> Trouver une installation, un équipement ou une activité en pays de la loire </h1>
     <form id="form">
 		  <div id="radio">
@@ -52,19 +55,15 @@
 
       <!--</br>
       veuillez selectionnner un équipement (exemple: terrain de basket) </br>
-
       <select id="select_equip">
       </select>
-
-
       </br>
       veuillez selectionner une installation <br>
-
       <select id="select_inst">
       </select>-->
       <input type="submit" value="soumettre" id="sub"></input>
     </form>
-    
+
     <div id="resultats">
 			<div id="onglets">
 				<ul>
@@ -77,15 +76,15 @@
 				<div id="onglet-2">
 				  <table id="table_resultats">
 				   <thead id="thead_info">
-				   
+
 				   </thead>
 				   <tfoot id="tfoot_info">
-				   
+
 				   </tfoot>
 				   <tbody id="tbody_info">
-				   
+
 				   </tbody>
-				   
+
 				  <table>
 				</div>
 			 </div>
@@ -93,6 +92,6 @@
 
 
 
-    
+
   </body>
 </html>
