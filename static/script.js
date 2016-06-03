@@ -59,9 +59,9 @@ $( document ).ready(function() {
 				for (i = 0;i<table.length;i++)
 				{
 					tBody += "<tr class='tr_table' onclick='afficherAdresse(\""+table[i][3]+"\","+i+")'>";
-					tBody += "<td>"+table[i][2]"</td>";
-					tBody += "<td>"+table[i][1]"</td>";
-					tBody += "<td>"+table[i][3]"</td>";
+					tBody += "<td>"+table[i][2]+"</td>";
+					tBody += "<td>"+table[i][1]+"</td>";
+					tBody += "<td>"+table[i][3]+"</td>";
 					tBody += "</tr>";
 				}
 				$("#tbody_info").html(tBody);
@@ -78,9 +78,9 @@ $( document ).ready(function() {
 				for (i = 0;i<table.length;i++)
 				{
 					tBody += "<tr class='tr_table' onclick='afficherAdresse(\""+table[i][3]+"\","+i+")'>";
-					tBody += "<td>"+table[i][1]"</td>";
-					tBody += "<td>"+table[i][3]"</td>";
-					tBody += "<td>"+table[i][2]"</td>";
+					tBody += "<td>"+table[i][1]+"</td>";
+					tBody += "<td>"+table[i][3]+"</td>";
+					tBody += "<td>"+table[i][2]+"</td>";
 					tBody += "</tr>";
 				}
 				$("#tbody_info").html(tBody);
