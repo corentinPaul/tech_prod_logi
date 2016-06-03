@@ -25,25 +25,18 @@
 
 			maps = {{!maps}}//les coordonnées des installations pour maps
 			table = {{!table}}//les infos sur les installations pour la table
-<<<<<<< HEAD
+
 			
 			nom_ville = {{!ville}}
 			nom_act = {{!activite}}
-=======
-
-
-
-			//code_postal = {{!code_postal}}//
-			//num_act = {{!num_act}}//
->>>>>>> 2d1511882055c2adb7740a2b8b9cfd29b6c75a27
 		</script>
   </head>
   <body>
     <div id="premier_plan">
-    
+    <br><br><br>
     <p id="titre_main"> Bienvenue sur le site des activitées sportives en Pays de Loire
-    </p>
-    <input id="submit_main" type="submit" value="effectuer une recherche">
+    </p><br><br><br><br>
+    <input id="submit_main" type="submit" onclick="afficher_page()" value="effectuer une recherche">
     </div>
     <h1> Trouver une installation, un équipement ou une activité en pays de la loire </h1>
     <form id="form">
@@ -71,11 +64,12 @@
       </select>-->
       <input type="submit" value="soumettre" id="sub"></input>
     </form>
-
+		
     <div id="resultats">
+    <div id="choix"></div>
 			<div id="onglets">
 				<ul>
-				  <li><a href="#onglet-1" id="li_1">MAPS</a></li>
+				  <li><a href="#onglet-1" id="li_1" onclick="chargerCarte()">MAPS</a></li>
 				  <li><a href="#onglet-2" id="li_2">TABLEAU</a></li>
 				</ul>
 				<div id="onglet-1">

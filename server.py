@@ -11,7 +11,7 @@ def index():
 #def index(num):
 #    return template('<b>Hello {{num}}</b>!',num=num)
     
-@get('/info&postal=<postal>&act=<num_act>')
+@get('/info&postal=<postal>&act=<num_act>')#la personne à envoyé des données de recherches
 def index(postal,num_act):
 	conn = sqlite3.connect('static/sports_pdl.db')# in order to have access to the database you must connect
 	
@@ -23,12 +23,12 @@ def index(postal,num_act):
 	
 	#REQUETES RECUP DONNEEE
 	
-	if(postal != 0):
+	if(postal != 0):#le client a choisi par code postal
 		cursor3 = conn.cursor()
 		cursor3.execute("""SELECT lib_act, numero_voie, nom_voie, lieu_dit, commune, nom_usuel_inst, longitude, latitude FROM installation i, equipement e, activite a WHERE i.numero_inst=e.numero_inst AND e.equipement_id=a.equipement_id AND code_postal ="""+postal+""" GROUP BY lib_act, numero_voie, nom_voie, lieu_dit, commune, nom_usuel_inst""")
 		i=0
 		for x in cursor3.fetchall(): #separator for each row of the cursor
-			temp = [i,x[0],x[5],str(x[1])+" "+x[2]+" "+x[3]+" "+str(postal)+" "+x[4]]
+			temp = [i,x[5],x[0],str(x[1])+" "+x[2]+" "+x[3]+" "+str(postal)+" "+x[4]]#on récupère le nom de l'installation, l'activité et on concatène l'adresse
 			table.append(temp)
 			temp = [i,x[6],x[7]]
 			maps.append(temp)
@@ -41,12 +41,12 @@ def index(postal,num_act):
 			ville = "'"+x[0]+"'"
 		
 		
-	if(num_act != 0):
+	if(num_act != 0):#le client a choisi par activité
 		cursor4 = conn.cursor()
 		cursor4.execute("""SELECT numero_voie, nom_voie, lieu_dit,code_postal, commune, nom_usuel_inst, longitude, latitude FROM installation i, equipement e, activite a WHERE i.numero_inst=e.numero_inst AND e.equipement_id=a.equipement_id AND  act_code="""+num_act+""" GROUP BY numero_voie, nom_voie,lieu_dit, code_postal, commune, nom_usuel_inst""")
 		i = 0
 		for x in cursor4.fetchall(): #separator for each row of the cursor
-			temp = [i,x[5],str(x[0])+" "+x[1]+" "+x[2]+" "+str(x[3])+" "+x[4],x[4]]
+			temp = [i,x[5],x[4],str(x[0])+" "+x[1]+" "+x[2]+" "+str(x[3])+" "+x[4]]#on récupère le nom de l'installation, on concatène l'adresse et on récupère la commune à part
 			table.append(temp)
 			temp = [i,x[6],x[7]]
 			maps.append(temp)
@@ -59,7 +59,7 @@ def index(postal,num_act):
 			activite = "'"+x[0]+"'"
 	
 	#FIN REQUETES
-	
+	#je récupère les données pour un nouvelle recherche si besoin
 	cursor = conn.cursor()
 	cursor.execute("""SELECT DISTINCT code_postal, commune FROM installation WHERE code_postal != '' AND commune != '' ORDER BY code_postal ASC""")
 	#request that return the postal code and the name of the city
@@ -84,7 +84,7 @@ def index(postal,num_act):
     
 
 @route('/')
-def index():
+def index():#on affiche la page principale avec le formulaire
 	ville="''"
 	activite="''"
 	maps = []
@@ -108,7 +108,7 @@ def index():
 
 	return template('index', tab=json.dumps(tab), act=json.dumps(act),num_act=0,code_postal=0,table=json.dumps(table),maps=json.dumps(maps),ville=ville,activite=activite)
 
-@route('/static/:path#.+#', name='static')
+@route('/static/:path#.+#', name='static')#on définit une route pour aller chercher les autres fichiers utiles et images
 def static(path):
     return static_file(path, root='static')
 
