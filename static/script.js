@@ -221,6 +221,10 @@ function chargerCarte()//on a cliqué sur l'onglet MAPS donc ajotue les markers 
 		}
 		carteChargee=true;
 	}
+	setTimeout(function()
+	{
+		$(window).scrollTop($("#onglets").offset().top);
+	},500);
 }
 
 function afficherAdresse(adresse, i)//on affiche l'adresse quand on clique sur un tr de la table.
